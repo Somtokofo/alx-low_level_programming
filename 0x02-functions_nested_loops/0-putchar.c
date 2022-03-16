@@ -6,6 +6,13 @@
  */
 int main(void)
 {
-        printf("_putchar\n");
-        return (0);
+	char chr[8] = "_putchar";
+	int i;
+
+	for (i = 0; i < 8; i++)
+	{
+		putchar(chr[i]);
+	}
+	putchar('\n');
+	return (0);
 }
