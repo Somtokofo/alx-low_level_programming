@@ -9,10 +9,10 @@
 
 void print_alphabet_x10(void)
 {
-        int alp_count = 0;
+	int alp_count = 0;
 
-	      while (alp_count < 10)
-        {
+	while (alp_count < 10)
+	{
                 char ch = 'a';
 
                 do {
