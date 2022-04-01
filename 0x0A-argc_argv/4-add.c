@@ -13,13 +13,14 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		while (argv[i] != '\0')
+		while (argv[i][j] != '\0')
 		{
-			if (!isdigit(argv[i]))
+			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
+			j++;
 		}
 		add += atoi(argv[i]);
 	}
