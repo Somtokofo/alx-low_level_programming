@@ -41,7 +41,7 @@ char *string_nconcat(char *str1, char *str2, unsigned int n)
 		if (i < lstr1)
 			strout[i] = str1[i];
 		else
-			strout[i] = str2[i - ls1];
+			strout[i] = str2[i - lstr1];
 		i++;
 
 	strout[i] = '\0';
