@@ -21,9 +21,9 @@ char *string_nconcat(char *str1, char *str2, unsigned int n)
 	if (str2 == NULL)
 		str2 = "";
 
-	lstr1 = strlen(str1);
+	lstr1 = strlen(*str1);
 
-	lstr2 = strlen(str2);
+	lstr2 = strlen(*str2);
 
 	if (n > lstr2)
 		n = lstr2;
