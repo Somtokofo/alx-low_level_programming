@@ -10,43 +10,40 @@
  * Return: pointer to the allocated memory.
  * if malloc fails, status value is equal to 98.
  */
-char *string_nconcat(char *str1, char *str2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *strout;
-	unsigned int lstr1, lstr2, lstrout, i;
+	char *sout;
+	unsigned int ls1, ls2, lsout, i;
 
-	if (str1 == NULL)
-		str1 = "";
+	if (s1 == NULL)
+		s1 = "";
 
-	if (str2 == NULL)
-		str2 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	for (lstr1 = 0; str1[lstr1] != '\0'; lstr1++)
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		;
 
-	for (lstr2 = 0; str2[lstr2] != '\0'; lstr2++)
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
 		;
 
-	if (n > lstr2)
-		n = lstr2;
+	if (n > ls2)
+		n = ls2;
 
-	lstrout = lstr1 + n;
+	lsout = ls1 + n;
 
-	strout = malloc(lstrout + 1);
+	sout = malloc(lsout + 1);
 
-	if (strout == NULL)
+	if (sout == NULL)
 		return (NULL);
-	
-	i = 0;
 
-	while (i < lstrout)
-		if (i < lstr1)
-			strout[i] = str1[i];
+	for (i = 0; i < lsout; i++)
+		if (i < ls1)
+			sout[i] = s1[i];
 		else
-			strout[i] = str2[i - lstr1];
-		i++;
+			sout[i] = s2[i - ls1];
 
-	strout[i] = '\0';
+	sout[i] = '\0';
 
-	return (strout);
+	return (sout);
 }
