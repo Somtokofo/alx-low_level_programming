@@ -21,9 +21,11 @@ char *string_nconcat(char *str1, char *str2, unsigned int n)
 	if (str2 == NULL)
 		str2 = "";
 
-	lstr1 = strlen(*str1);
+	for (lstr1 = 0; str1[lstr1] != '\0'; lstr1++)
+		;
 
-	lstr2 = strlen(*str2);
+	for (lstr2 = 0; str2[lstr2] != '\0'; lstr2++)
+		;
 
 	if (n > lstr2)
 		n = lstr2;
