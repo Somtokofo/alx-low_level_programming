@@ -6,17 +6,11 @@
  * @n: bytes filled.
  * Return: the pointer to dest.
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
 unsigned int i;
 
-	i = 0;
-
-	while (i < n)
-	{
-		s[i] = b;
-		i++;
-	}
-	return(s);
+	for (i = 0; i < n; i++)
+		*(s + i) =  b;
+	return (s);
 }
