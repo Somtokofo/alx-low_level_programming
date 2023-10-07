@@ -9,11 +9,11 @@
  */
 char *_strdup(char *str)
 {
-	char *db;
-	unsigned int len, i;
+	char *dup;
+	unsigned int i, len;
 
 	i = 0;
-	len == 0;
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -21,14 +21,13 @@ char *_strdup(char *str)
 	while (str[len])
 		len++;
 
-	db = malloc(sizeof(char) * (len + 1));
+	dup = malloc(sizeof(char) * (len + 1));
 
-	if (db == NULL)
-		return(NULL);
+	if (dup == NULL)
+		return (NULL);
 
-	while (str[i])
-		db[i] = str[i];
+	while ((dup[i] = str[i]) != '\0')
 		i++;
 
-	return(db);
+	return (dup);
 }
